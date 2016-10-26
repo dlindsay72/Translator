@@ -21,6 +21,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
         if let defaults = UserDefaults(suiteName: "group.com.omnificCondition.Translator") {
             if let savedWords = defaults.object(forKey: "Words") as? [String] {
                 
@@ -44,6 +46,15 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDataS
         completionHandler(NCUpdateResult.newData)
     }
     
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        
+        if activeDisplayMode == .compact {
+            preferredContentSize = CGSize(width: 0, height: 110)
+        } else {
+            preferredContentSize = CGSize(width: 0, height: 440)
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -62,6 +73,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDataS
         cell.textLabel?.text = split[0]
         
         cell.detailTextLabel?.text = ""
+        
+        cell.selectedBackgroundView = UIView()
+        cell.selectedBackgroundView?.backgroundColor = UIColor(white: 1, alpha: 0.2)
         
         return cell
     }
