@@ -15,6 +15,10 @@ class MainVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startTest))
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "End Test", style: .plain, target: nil, action: nil)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewWord))
         
         let titleAttributes = [NSFontAttributeName: UIFont(name: "AmericanTypewriter", size: 22)!] //he has 2 t's in Typewriter"
@@ -145,6 +149,15 @@ class MainVC: UITableViewController {
         tableView.insertRows(at: [newIndexPath], with: .automatic)
         
         saveWords()
+    }
+    
+    func startTest() {
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Test") as? TestVC else { return }
+        
+        vc.words = words
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

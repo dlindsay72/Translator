@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B755D891DC141B500EFAC4B /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B755D881DC141B500EFAC4B /* TestVC.swift */; };
 		7B76820C1DC11E89004DE53E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B76820B1DC11E89004DE53E /* NotificationCenter.framework */; };
 		7B76820F1DC11E89004DE53E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B76820E1DC11E89004DE53E /* TodayViewController.swift */; };
 		7B7682121DC11E89004DE53E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7682101DC11E89004DE53E /* MainInterface.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B755D881DC141B500EFAC4B /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		7B7682091DC11E89004DE53E /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B76820B1DC11E89004DE53E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		7B76820E1DC11E89004DE53E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				7BF1DF3D1DBFEA3E009513CF /* Assets.xcassets */,
 				7BF1DF3F1DBFEA3E009513CF /* LaunchScreen.storyboard */,
 				7BF1DF421DBFEA3E009513CF /* Info.plist */,
+				7B755D881DC141B500EFAC4B /* TestVC.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF1DF371DBFEA3E009513CF /* AppDelegate.swift in Sources */,
+				7B755D891DC141B500EFAC4B /* TestVC.swift in Sources */,
 				7BF1DF671DBFF384009513CF /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +462,7 @@
 				7B7682181DC11E89004DE53E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BF1DF2E1DBFEA3E009513CF /* Build configuration list for PBXProject "Translator" */ = {
 			isa = XCConfigurationList;
